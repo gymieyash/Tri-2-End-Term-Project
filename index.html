@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage your Lazy ahh</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h1 class="logo">Manage your lazy ahh</h1>
+
+    <div class="nav-actions">
+      <select id="filter">
+        <option value="all">All Tasks</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Not Completed</option>
+      </select>
+      <button id="loginBtn">Login</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <button id="openAddTask" class="add-task-btn">+ Add Task</button>
+    <section id="taskList" class="task-list"></section>
+  </main>
+
+  
+  <div id="addTaskModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Add Task</h2>
+
+      <input type="text" id="taskTitle" placeholder="Task name"/>
+      <textarea id="taskDesc" placeholder="Task description"></textarea>
+
+      <button id="selectPriority">Select Priority</button>
+      <input type="datetime-local" id="taskDeadline"/>
+
+      <div class="modal-actions">
+        <button id="addTaskBtn">Add</button>
+        <button id="closeAddTask">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="priorityModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Select Priority</h2>
+
+      <button data-priority="high">💀 Do or Die</button>
+      <button data-priority="medium">🧠 Brain Rot</button>
+      <button data-priority="low">😴 Kal Dekhenge</button>
+
+      <button id="closePriority">Close</button>
+    </div>
+  </div>
+
+  
+  <div id="loginPage" class="modal hidden">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <p>This feature does not work yet.</p>
+      <button id="closeLogin">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
